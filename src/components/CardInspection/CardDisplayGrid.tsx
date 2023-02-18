@@ -1,10 +1,7 @@
-import * as React from 'react';
-import {Grid, GridProps, Box} from '@workday/canvas-kit-react/layout';
-import {type} from '@workday/canvas-kit-react/tokens';
-import styled from '@emotion/styled';
+import {Grid, GridProps} from '@workday/canvas-kit-react/layout';
 import { StyledHeading } from '../CustomStyles/StyledHeading';
 import { CardDisplaySidebar } from './CardDisplaySidebar';
-import { CardInspectBody } from './CardInspectBody';
+import { CardDetailGrid } from './CardDetailGrid';
 
 // temporary placeholder until type components are added to canvas-kit
 
@@ -28,19 +25,19 @@ const Footer = ({children, ...props}: GridProps) => (
 export const CardDisplayGrid = (props: any) => {
   const parentCont = {
     gridTemplateAreas:
-      "'Header Header Header Header' 'SideBar BodyContent BodyContent BodyContent' 'Footer Footer Footer Footer'",
+      "'Header Header Header Header' 'SideBar BodyContent BodyContent BodyContent' 'SideBar BodyContent BodyContent BodyContent' 'Footer Footer Footer Footer'",
     gridGap: 's',
     gridTemplateColumns: '3fr 9fr',
-    gridTemplateRows: 'auto 500px auto',
+    gridTemplateRows: 'auto 550px auto',
   };
   return (
     <Grid as="section" padding="s">
       <Grid {...parentCont}>
         <Header backgroundColor="blueberry400">
-          <StyledHeading>{props.CardProps.name}</StyledHeading>
+          <StyledHeading>{props.cardData.data[0].name}</StyledHeading>
         </Header>
-        <CardDisplaySidebar borderPadProps={borderPadProps} imageURL={props.CardProps.imageURL}/>
-        <CardInspectBody borderPadProps={borderPadProps}/>
+        <CardDisplaySidebar borderPadProps={borderPadProps} imageURL={props.cardData.data[0].id + ".avif"}/>
+        <CardDetailGrid cardData={props.cardData}/>
         <Footer backgroundColor="berrySmoothie300">
           <StyledHeading>Footer</StyledHeading>
         </Footer>

@@ -12,7 +12,7 @@ export const CardDisplaySidebar = (ImageProps: any) => {
       );
     return (
       <SideBar backgroundColor="blueberry300">
-        <img src={process.env.PUBLIC_URL + '/' + ImageProps.imageURL}/>
+        <img alt="" src={process.env.PUBLIC_URL + '/' + ImageProps.imageURL}/>
       </SideBar>
     );
 }

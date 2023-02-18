@@ -1,9 +1,6 @@
-import React from 'react';
-
 import {Modal} from '@workday/canvas-kit-react/modal';
 import {PrimaryButton} from '@workday/canvas-kit-react/button';
-import {HStack, Box} from '@workday/canvas-kit-react/layout';
-import { Url } from 'url';
+import {HStack} from '@workday/canvas-kit-react/layout';
 import { CardDisplayGrid } from './CardInspection/CardDisplayGrid';
 
 
@@ -29,7 +26,7 @@ export const TestComponent = (props: any) => {
           <Modal.Heading>View Card</Modal.Heading>
           <Modal.Body>
             <div>
-                <CardDisplayGrid CardProps={props.CardProps}/>
+              <CardDisplayGrid cardData={props.cardData}/>
             </div>
           </Modal.Body>
           <HStack spacing="s" padding="xxs" marginTop="xxs">
