@@ -79,7 +79,7 @@ export const CardCellDetail = (detailProps: any) => {
     }
 
     return (
-    <div >
+    <div style={{"width" : "100%"}}>
         <StyledCardInfoHeading>{detailProps.detailHeading}</StyledCardInfoHeading>
         <hr style={cellDivider} />
         <div style={{ "display": "table" }}>

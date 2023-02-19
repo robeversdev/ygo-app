@@ -3,8 +3,6 @@ import { StyledHeading } from '../CustomStyles/StyledHeading';
 import { CardDisplaySidebar } from './CardDisplaySidebar';
 import { CardDetailGrid } from './CardDetailGrid';
 
-// temporary placeholder until type components are added to canvas-kit
-
 const borderPadProps = {
   borderRadius: 'm',
   padding: 's',
@@ -22,10 +20,11 @@ const Footer = ({children, ...props}: GridProps) => (
   </Grid>
 );
 
+// DetailContent = CardDetailGrid gridArea
 export const CardDisplayGrid = (props: any) => {
   const parentCont = {
     gridTemplateAreas:
-      "'Header Header Header Header' 'SideBar BodyContent BodyContent BodyContent' 'SideBar BodyContent BodyContent BodyContent' 'Footer Footer Footer Footer'",
+      "'Header Header Header Header' 'SideBar DetailContent DetailContent DetailContent' 'SideBar DetailContent DetailContent DetailContent' 'Footer Footer Footer Footer'",
     gridGap: 's',
     gridTemplateColumns: '3fr 9fr',
     gridTemplateRows: 'auto 550px auto',

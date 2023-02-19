@@ -6,7 +6,7 @@ export const StyledCardInfoHeading = styled(Box.as('h3'))({
     ...type.levels.body.large,
     ...type.variants.inverse,
     margin: 0,
-    width: "400px",
+    width: "100%",
     fontWeight: type.properties.fontWeights.bold,
     textAlign: "left"
   });

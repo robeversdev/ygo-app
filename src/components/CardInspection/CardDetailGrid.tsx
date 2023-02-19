@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Grid, GridProps} from '@workday/canvas-kit-react/layout';
+import {Flex, Grid, GridProps} from '@workday/canvas-kit-react/layout';
 import { CardCellDetail } from './CardCellDetail';
 import { AttributeEnum, CardDetailEnum, TypingEnum } from '../../Utils/Enums';
 import { CardData } from '../../Interfaces/CardData';
@@ -12,7 +12,7 @@ const borderPadProps = {
 
 const Cell = (props: {children: React.ReactNode}) => {
     return (
-      <Grid
+      <Flex
         alignContent="center"
         padding="xs"
         justifyContent="center"
@@ -21,7 +21,7 @@ const Cell = (props: {children: React.ReactNode}) => {
         borderRadius="m"
       >
         {props.children}
-      </Grid>
+      </Flex>
     );
   };
 
@@ -101,7 +101,7 @@ export const CardDetailGrid = ({children, ...props}: any) => {
       gridTemplateRows: 'auto auto auto',
     };
     return (
-    <Grid as="section" padding="s">
+    <Grid gridArea="DetailContent" as="section" padding="s">
         <Grid depth={1} {...parentCont}>
             <BodyContent>
                 <CardDetail {...cardData}/>
