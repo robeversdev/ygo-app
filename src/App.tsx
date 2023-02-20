@@ -1,4 +1,5 @@
 import './App.css';
+import { CardTable } from './components/CardTable';
 import { HeaderMenu } from './components/HeaderBody/HeaderMenu';
 import { TestComponent } from './components/TestComponent';
 
@@ -86,6 +87,7 @@ function App() {
     <div className="App">
       <HeaderMenu />
       {<TestComponent cardData={laundryDragonmaidTest}/>}
+      <CardTable />
       {/*<CardDetailGrid cardData={laundryDragonmaidTest}/>*/}
     </div>
   );
