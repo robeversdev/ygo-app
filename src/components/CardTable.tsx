@@ -1,5 +1,5 @@
 import {Table, TableRow} from '@workday/canvas-kit-react/table';
-import { PrimaryButton } from '@workday/canvas-kit-react';
+import { PrimaryButton, SecondaryButton } from '@workday/canvas-kit-react';
 import {
     filterIcon,
   } from '@workday/canvas-system-icons-web';
@@ -17,12 +17,20 @@ const rows = [
 
 const testCardColumns = ['ID', 'Name', 'Type', 'Rarity', 'Availability', 'Actions'];
 
-const testCardRows = [[13171876, 'Laundry Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card']];
+const testCardRows = [
+  [13171876, 'Laundry Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+  [13171878, 'Parlor Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+  [13171879, 'Kitchen Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+  [13171880, 'Nurse Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+  [13171881, 'House Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+  [13171882, 'Chamber Dragonmaid', 'Effect Monster', 'Rare', 'Unlimited', 'View Card'],
+];
 
 // const [availableNums, setAvailableNums] = useState([1,2,3]);
 
 export const CardTable = () => {
-  const [cardRows, setCardRows] = useState(rows);
+  const [cardRows, setCardRows] = useState(testCardRows);
+  const finalColumnIndex = (testCardColumns.length - 1);
 
   const SortBySelectedColumn = (columnIndex : number) => {
     var arrayToSort = [...cardRows]; // shallow copy. If rows have nested objects, rememeber to deal with this.
@@ -44,7 +52,7 @@ export const CardTable = () => {
     <Table>
       <thead>
         <TableRow header={true}>
-          {columns.map((col, i) => (
+          {testCardColumns.map((col, i) => (
             <th key={i}>{col}{<PrimaryButton onClick={() => SortBySelectedColumn(i)} icon={filterIcon} variant="inverse" backgroundColor={"transparent"} />}</th>
           ))}
         </TableRow>
@@ -52,9 +60,15 @@ export const CardTable = () => {
       <tbody>
         {cardRows.map((row, i) => (
           <TableRow key={i}>
-            {row.map((cell, j) => (
-              <td key={j}>{cell}</td>
-            ))}
+            {row.map((cell, j) => {
+              if(j == finalColumnIndex) {
+                return (<td key={j}>{<SecondaryButton>cell</SecondaryButton>}</td>)
+              }
+              else return (
+                <td key={j}>{cell}</td>
+              )
+              }
+            )}
           </TableRow>
         ))}
       </tbody>
