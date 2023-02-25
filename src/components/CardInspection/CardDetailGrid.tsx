@@ -93,7 +93,7 @@ const CardTextTitle = ({children, ...props}: GridProps) => (
 
 export const CardDetailGrid = ({children, ...props}: any) => {
 
-    const cardData = props.cardData.data[0] as CardData;
+    const cardData = props.cardData as CardData;
 
     const parentCont = {
       gridTemplateAreas: "'BodyContent BodyContent BodyContent BodyContent' 'CardTextTitle CardTextTitle CardTextTitle CardTextTitle' 'CardText CardText CardText CardText'",

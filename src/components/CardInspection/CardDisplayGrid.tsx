@@ -29,13 +29,14 @@ export const CardDisplayGrid = (props: any) => {
     gridTemplateColumns: '3fr 9fr',
     gridTemplateRows: 'auto 550px auto',
   };
+
   return (
     <Grid as="section" padding="s">
       <Grid {...parentCont}>
         <Header backgroundColor="blueberry400">
-          <StyledHeading>{props.cardData.data[0].name}</StyledHeading>
+          <StyledHeading>{props.cardData.name}</StyledHeading>
         </Header>
-        <CardDisplaySidebar borderPadProps={borderPadProps} imageURL={props.cardData.data[0].id + ".avif"}/>
+        <CardDisplaySidebar borderPadProps={borderPadProps} imageURL={props.cardData.id + ".avif"}/>
         <CardDetailGrid cardData={props.cardData}/>
         <Footer backgroundColor="berrySmoothie300">
           <StyledHeading>Footer</StyledHeading>

@@ -1,11 +1,11 @@
 import {Modal} from '@workday/canvas-kit-react/modal';
-import {PrimaryButton} from '@workday/canvas-kit-react/button';
+import {PrimaryButton, SecondaryButton} from '@workday/canvas-kit-react/button';
 import {HStack} from '@workday/canvas-kit-react/layout';
 import { CardDisplayGrid } from './CardInspection/CardDisplayGrid';
 
 
 
-export const TestComponent = (props: any) => {
+export const ViewCardModal = (props: any) => {
   const handleAcknowledge = () => {
     console.log('License Acknowledged');
     console.log('' + props.CardProps.name + '')
@@ -19,7 +19,7 @@ export const TestComponent = (props: any) => {
 
   return (
     <Modal>
-      <Modal.Target as={PrimaryButton}>View Card</Modal.Target>
+      <Modal.Target as={SecondaryButton}>View Card</Modal.Target>
       <Modal.OverflowOverlay>
         <Modal.Card style={{"width": "100%"}}>
           <Modal.CloseIcon aria-label="Close" />
