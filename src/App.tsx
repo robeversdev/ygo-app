@@ -1,5 +1,8 @@
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import './App.css';
 import { CardTable } from './components/CardTable';
+import { Example } from './components/ComboCreator/Example';
 import { HeaderMenu } from './components/HeaderBody/HeaderMenu';
 
 const testData = {
@@ -16,8 +19,11 @@ function App() {
     <div className="App">
       <HeaderMenu />
       {/*<TestComponent cardData={laundryDragonmaidTest}/>*/}
-      <CardTable />
+      {/*<CardTable />*/}
       {/*<CardDetailGrid cardData={laundryDragonmaidTest}/>*/}
+      <DndProvider backend={HTML5Backend}>
+					<Example />
+			</DndProvider>
     </div>
   );
 }

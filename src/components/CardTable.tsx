@@ -9,10 +9,6 @@ import { TestData } from '../Utils/TestData';
 
 const testCardColumns = ['ID', 'Name', 'Type', 'Rarity', 'Availability', 'Actions'];
 
-
-
-// const [availableNums, setAvailableNums] = useState([1,2,3]);
-
 const BuildRowsOfCardData = (ImportedCardData : any) => {
   let cardRowsToDisplay: any[][] = [];
 
