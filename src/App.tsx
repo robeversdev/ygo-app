@@ -2,7 +2,10 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import './App.css';
 import { CardTable } from './components/CardTable';
+import { ComboSidePanel } from './components/ComboCreator/ComboSidePanel';
+import { ComboStudio } from './components/ComboCreator/ComboStudio';
 import { Example } from './components/ComboCreator/Example';
+import { PannableContainer } from './components/ComboCreator/PannableContainer';
 import { HeaderMenu } from './components/HeaderBody/HeaderMenu';
 
 const testData = {
@@ -21,9 +24,9 @@ function App() {
       {/*<TestComponent cardData={laundryDragonmaidTest}/>*/}
       {/*<CardTable />*/}
       {/*<CardDetailGrid cardData={laundryDragonmaidTest}/>*/}
-      <DndProvider backend={HTML5Backend}>
-					<Example />
-			</DndProvider>
+      {/*<DndProvider backend={HTML5Backend}> </DndProvider>*/}
+      {/*<PannableContainer> <CardTable /> </PannableContainer*/}
+      <ComboStudio/>
     </div>
   );
 }

@@ -2480,24 +2480,35 @@
   "resolved" "https://registry.npmjs.org/@workday/canvas-colors-web/-/canvas-colors-web-2.0.0.tgz"
   "version" "2.0.0"
 
-"@workday/canvas-kit-popup-stack@^8.4.9":
-  "integrity" "sha512-DKfXF2HDcpmaiumclDzyQRmDnnWU3KHuco0uAld49AJRZ/RCkUGVQtQccwMXJLDUO4XfXlQXAA9nVMF7Sam7RA=="
-  "resolved" "https://registry.npmjs.org/@workday/canvas-kit-popup-stack/-/canvas-kit-popup-stack-8.4.9.tgz"
-  "version" "8.4.9"
+"@workday/canvas-kit-popup-stack@^8.4.12":
+  "integrity" "sha512-R9aXp6KfruSq7s4MbuZVj3GcA9pY6K0fEUMqNgAwr+p0t4RtL9W6mcQfdcYCuyIyKtlBG6cifGc/Y0wyEF8o4g=="
+  "resolved" "https://registry.npmjs.org/@workday/canvas-kit-popup-stack/-/canvas-kit-popup-stack-8.4.12.tgz"
+  "version" "8.4.12"
   dependencies:
     "screenfull" "^5.2.0"
 
-"@workday/canvas-kit-react@^8.4.9":
-  "integrity" "sha512-rVBVu9HEs/MK+gXeesAxI6HHsppQmkGwqCXZJGCCDTUjepPoAoiWYeA8be9D1SvUCKTofGzznGqe1j0U67tVEQ=="
-  "resolved" "https://registry.npmjs.org/@workday/canvas-kit-react/-/canvas-kit-react-8.4.9.tgz"
-  "version" "8.4.9"
+"@workday/canvas-kit-preview-react@^8.4.12":
+  "integrity" "sha512-mvwV48WNHqeFAavGlW4/TX1fuj3hugAtziyQsvnAVEpws9K1lGSPXWbgwiq2cqTZMffWBykVp1esYZlwMKigUg=="
+  "resolved" "https://registry.npmjs.org/@workday/canvas-kit-preview-react/-/canvas-kit-preview-react-8.4.12.tgz"
+  "version" "8.4.12"
+  dependencies:
+    "@emotion/react" "^11.7.1"
+    "@emotion/styled" "^11.6.0"
+    "@workday/canvas-kit-react" "^8.4.12"
+    "@workday/canvas-system-icons-web" "^3.0.0"
+    "@workday/design-assets-types" "^0.2.8"
+
+"@workday/canvas-kit-react@^8.4.12", "@workday/canvas-kit-react@^8.4.9":
+  "integrity" "sha512-nxkWytHx0WAw7b6sMz4kAN0uWfj6BFP+y85ZT5BSxQ02Lnrv9z2SXzBFl3coLy4g6GB/KfWhs4GblFOk9QjrDg=="
+  "resolved" "https://registry.npmjs.org/@workday/canvas-kit-react/-/canvas-kit-react-8.4.12.tgz"
+  "version" "8.4.12"
   dependencies:
     "@emotion/is-prop-valid" "^1.1.1"
     "@emotion/react" "^11.7.1"
     "@emotion/styled" "^11.6.0"
     "@popperjs/core" "^2.5.4"
     "@workday/canvas-colors-web" "^2.0.0"
-    "@workday/canvas-kit-popup-stack" "^8.4.9"
+    "@workday/canvas-kit-popup-stack" "^8.4.12"
     "@workday/canvas-system-icons-web" "^3.0.0"
     "@workday/design-assets-types" "^0.2.8"
     "chroma-js" "^2.1.0"
@@ -7757,7 +7768,7 @@
     "fast-deep-equal" "^3.1.3"
     "hoist-non-react-statics" "^3.3.2"
 
-"react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.8.0":
+"react-dom@*", "react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.8.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -7875,7 +7886,12 @@
   dependencies:
     "@reach/observe-rect" "^1.1.0"
 
-"react@^16.6.3 || ^17.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.14", "react@>=0.0.0 <=99", "react@>=16.14", "react@>=16.3", "react@>=16.8.0":
+"react-zoom-pan-pinch@^3.0.1":
+  "integrity" "sha512-FVYDdgSRYFuVUB1kkGzKx00zYZGgXttqnxEyqkh1/xQ/vLIpXg6pnj9Ud3OyBi+e9zRPFlofn5ODQF3duOHUIg=="
+  "resolved" "https://registry.npmjs.org/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.0.1.tgz"
+  "version" "3.0.1"
+
+"react@*", "react@^16.6.3 || ^17.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.14", "react@>=0.0.0 <=99", "react@>=16.14", "react@>=16.3", "react@>=16.8.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
